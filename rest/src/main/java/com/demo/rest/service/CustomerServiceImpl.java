@@ -24,4 +24,16 @@ public class CustomerServiceImpl implements CustomerService {
 		return dao.viewAllCustomers();
 	}
 
+	
+
+	@Override
+	public Customer updateCustomer(Customer customer) {
+		return dao.updateCustomer(customer);
+	}
+
+	@Override
+	public String deleteCustomer(Customer customer) {
+		return dao.deleteCustomer(customer);
+	}
+
 }

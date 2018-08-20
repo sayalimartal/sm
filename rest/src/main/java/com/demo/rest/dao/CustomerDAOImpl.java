@@ -42,4 +42,21 @@ public class CustomerDAOImpl implements CustomerDAO {
 		return customerList;
 	}
 
+	@Override
+	public String deleteCustomer(Customer customer) {
+			for(Customer cust:customerList) {
+				if(cust.getCustomerId()==customer.getCustomerId()) {
+					customerList.remove(cust);
+					break;
+				}
+			}
+			return "Customer with id "+customer.getCustomerId()+" has been deleted";
+	}
+
+	@Override
+	public Customer updateCustomer(Customer customer) {
+		deleteCustomer(customer);
+		customerList.add(customer);
+		return customer;
+	}
 }

@@ -8,4 +8,6 @@ import com.demo.rest.pojo.Customer;
 public interface CustomerService {
 	Customer addCustomer(Customer customer);
 	ArrayList<Customer> viewAllCustomers();
+	String deleteCustomer(Customer customer);
+	Customer updateCustomer(Customer customer);
 }
